@@ -1,0 +1,35 @@
+{
+  "name": "lagomjs",
+  "version": "0.0.1",
+  "description": "perfectjs is now lagomjs, just as lagomjs also is, always will be and always has been, perfectjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "clean-build": "rm -rf ./dist/*",
+    "build": "npm run clean-build && tsc -p ./tsconfig.json",
+    "prepublish": "npm run build"
+  },
+  "author": "David Borgenvik",
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "@types/node": "^8.0.47",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.1.4",
+    "typescript": "^2.5.3"
+  }
+}
